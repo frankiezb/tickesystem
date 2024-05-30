@@ -1,0 +1,16 @@
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: rgb(201, 139, 58);
+    color: rgb(4, 59, 4);
+    font-weight: bold;
+}
+
+.navbar a {
+    color: rgb(4, 59, 4);
+    font-weight: bold;
+}
