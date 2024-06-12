@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticketing System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#dashboard" class="tab-link">Dashboard</a>
+        <a href="#create-ticket" class="tab-link">Create Ticket</a>
+        <a href="#my-tickets" class="tab-link">My Tickets</a>
+        <a href="#all-tickets" class="tab-link">All Tickets</a>
+        <a href="#ticket-details" class="tab-link">Ticket Details</a>
+        <a href="#reports" class="tab-link">Reports</a>
+        <a href="#knowledge-base" class="tab-link">Knowledge Base</a>
+        <a href="#settings" class="tab-link">Settings</a>
+        <a href="#help" class="tab-link">Help</a>
+        <a href="#activity-log" class="tab-link">Activity Log</a>
+    </div>
+
+    <div id="dashboard" class="tab-content active">
+        <h2>Dashboard</h2>
+        <p>Overview of the system.</p>
+    </div>
+    <div id="create-ticket" class="tab-content">
+        <h2>Create Ticket</h2>
+        <p>Form to create a new ticket.</p>
+    </div>
+    <div id="my-tickets" class="tab-content">
+        <h2>My Tickets</h2>
+        <p>List of tickets assigned to or created by the user.</p>
+    </div>
+    <div id="all-tickets" class="tab-content">
+        <h2>All Tickets</h2>
+        <p>Comprehensive list of all tickets.</p>
+    </div>
+    <div id="ticket-details" class="tab-content">
+        <h2>Ticket Details</h2>
+        <p>Detailed view of individual tickets.</p>
+    </div>
+    <div id="reports" class="tab-content">
+        <h2>Reports</h2>
+        <p>Access to various reports and analytics.</p>
+    </div>
+    <div id="knowledge-base" class="tab-content">
+        <h2>Knowledge Base</h2>
+        <p>Repository of articles and guides.</p>
+    </div>
+    <div id="settings" class="tab-content">
+        <h2>Settings</h2>
+        <p>Configuration options for the system.</p>
+    </div>
+    <div id="help" class="tab-content">
+        <h2>Help</h2>
+        <p>Support resources and contact options.</p>
+    </div>
+    <div id="activity-log" class="tab-content">
+        <h2>Activity Log</h2>
+        <p>Audit trail of system activities.</p>
+    </div>
+
+    <script>
+        document.querySelectorAll('.tab-link').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

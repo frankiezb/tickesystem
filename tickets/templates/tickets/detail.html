@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="detail">
+
+    <div>
+        <a class="button1" href="{% url 'list' %}" class="btn-primary">Go Back</a>
+    </div>
+
+    <hi>{{ post.title }}</hi>
+    <label>{{post.create_at}}</label>
+
+    <p>
+        {{post.content}}
+    </p>
+</div>
+{% endblock %}
