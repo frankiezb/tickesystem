@@ -1,8 +1,20 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<h1>Welcome to The TickeMaster</h1>
+<div class="wrapper center-column">
+    <h1>Welcome to The TickeMaster</h1>
+
+    <img class="main-image" src="{% static '/img/Designer.png' %}" alt="" />
+
+    <p>
+        Our mission is to provide efficient, reliable, and user-friendly IT support through our innovative ticketing system. We aim to streamline issue resolution, enhance communication, and ensure seamless technology experiences for businesses and individuals, empowering them to focus on what they do best.
+    
+    </p>
+</div>
+
 {% endblock%}
+
 
 
 
