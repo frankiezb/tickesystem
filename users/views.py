@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 
 
 class CustomLoginView(LoginView):
-    template_name = 'USERS/login.html'
+    template_name = 'users/login.html'
 
     def get_success_url(self):
         return reverse_lazy('home')

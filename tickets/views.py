@@ -11,7 +11,7 @@ from django.urls import reverse
 
 # Create your views here.
 def home(request):
-    return render(request, 'Tickets/home.html')
+    return render(request, 'tickets/home.html')
 
 class CustomLoginView(LoginView):
     template_name = 'login.html'
@@ -23,7 +23,7 @@ class CustomLoginView(LoginView):
     
 class Create(CreateView):
     models = Post
-    template_name = "Tickets/create.html"
+    template_name = "tickets/create.html"
     form_class = CreateForm
     
     def get_success_url(self) -> str:
@@ -32,7 +32,7 @@ class Create(CreateView):
     
 class ListPosts(ListView):
     model = Post
-    template_name = "Tickets/list.html"
+    template_name = "tickets/list.html"
     context_object_name = 'posts'
     
     def get_queryset(self):
@@ -41,7 +41,7 @@ class ListPosts(ListView):
     
 class PostDetail(DetailView):
     model = Post
-    template_name = "Tickets/detail.html"
+    template_name = "tickets/detail.html"
     context_object_name = 'post'
     
     def get_queryset(self):
