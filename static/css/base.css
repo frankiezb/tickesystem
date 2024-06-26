@@ -3,6 +3,11 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.container-fuild {
+    padding: 20px 0;
+    min-height: calc(100vh - 130px);
+}
+
 .navbar {
     overflow: hidden;
     background-color: rgb(218, 146, 52);
@@ -99,7 +104,7 @@ footer {
     font-weight: bold;
     width: 100%;
     box-sizing: border-box;
-    position: absolute;
+
     bottom: 0;
     left: 0;
 }
@@ -129,3 +134,14 @@ footer {
     align-items: center;
 }
 
+/**
+********** STYLE FOR TICKET LIST *************
+*/
+
+.list .ticket {
+    border: 1px solid #6a6a6a;
+    border-radius: 4px;
+    background-color: white;
+    padding: 10px;
+    margin: 12px;
+}

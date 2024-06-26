@@ -3,14 +3,14 @@
 <div class="list">
 
     <div>
-        <a href="{% url 'create' %}" class="btn-primary">Create a new Post</a>
+        <a href="{% url 'create' %}" class="btn btn-primary">Create a new Post</a>
     </div>
 
-</div>
     {% for record in posts%}
-    <div class="record">
-        <h5><a href="{% url 'detail' record.id %}">{{record.title}}</a></h5>
-        <P>{{record.content}}</P>
+    <div class="ticket priority-{{record.get_priority_display}}">
+        <h5 class="title"><a href="{% url 'detail' record.id %}">{{record.title}}</a></h5>
+        <label class="priority">{{ record.get_priority_display }}</label>
+        <p class="content">{{record.content}}</p>
     </div>
 
     {% endfor%}
