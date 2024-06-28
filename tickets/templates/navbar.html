@@ -3,7 +3,7 @@
         <a href="{% url  'home' %}" class="tab-link">Dashboard</a>
         <a href="{% url 'create' %}" class="tab-link">Create Ticket</a>
         <a href="{% url 'list' %}" class="tab-link">All Tickets</a>
-        <a href="#reports" class="tab-link">Reports</a>
-        <a href="#help" class="tab-link">Help</a>
+        <a href="{% url 'report' %}" class="tab-link">Reports</a>
+        <a href="{% url 'help' %}" class="tab-link">Help</a>
     </div>
 </nav>

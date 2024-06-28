@@ -13,6 +13,12 @@ from django.urls import reverse
 def home(request):
     return render(request, 'tickets/home.html')
 
+def help(request):
+    return render(request, 'tickets/help.html')
+
+def report(request):
+    return render(request, 'tickets/reports.html')
+
 class CustomLoginView(LoginView):
     template_name = 'login.html'
 

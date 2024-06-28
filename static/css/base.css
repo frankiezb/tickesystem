@@ -134,6 +134,15 @@ footer {
     align-items: center;
 }
 
+
+.condensed-p {
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 15px 0;
+    padding: 10;
+    max-width: 500px;
+}
+
 /**
 ********** STYLE FOR TICKET LIST *************
 */
